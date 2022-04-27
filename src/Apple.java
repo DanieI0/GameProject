@@ -30,18 +30,18 @@ public class Apple {
         }
     }
     public void newApple() {
-        boolean ok = false;
-        while (!ok) {
-            ok = true;
+        boolean freePos = false;
+        while (!freePos) {
+            freePos = true;
             int tempX = rand.nextInt((Dimensions.GAME_WIDTH / Dimensions.OBJECT_SIZE)) * Dimensions.OBJECT_SIZE;
             int tempY = rand.nextInt((Dimensions.GAME_WIDTH / Dimensions.OBJECT_SIZE)) * Dimensions.OBJECT_SIZE;
             for (int i = 0; i < game.getPlayer().getBodyLength(); i++) {
                 if (tempX == game.getPlayer().getSnakeX()[i] && tempY == game.getPlayer().getSnakeY()[i]) {
-                    ok = false;
+                    freePos = false;
                     break;
                 }
             }
-            if (ok) {
+            if (freePos) {
                 appleX = tempX;
                 appleY = tempY;
             }
