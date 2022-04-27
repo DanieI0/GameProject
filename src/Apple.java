@@ -47,12 +47,4 @@ public class Apple {
             }
         }
     }
-    public void generateApple() {
-        for (int i = game.getPlayer().getBodyLength(); i > 0; i--) {
-            while (game.getPlayer().getSnakeX()[i] == appleX || game.getPlayer().getSnakeY()[i] == appleY) {
-                this.appleX = rand.nextInt((Dimensions.GAME_WIDTH / Dimensions.OBJECT_SIZE)) * Dimensions.OBJECT_SIZE;
-                this.appleY = rand.nextInt((Dimensions.GAME_HEIGHT / Dimensions.OBJECT_SIZE)) * Dimensions.OBJECT_SIZE;
-            }
-        }
-    }
 }
